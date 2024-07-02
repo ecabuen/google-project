@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Google Image Search</title>
+        <style>
+            body {
+                text-align: center;
+                font-family: Arial, sans-serif;
+            }
+            .search-bar {
+                width: 400px;
+                padding: 10px;
+                border-radius: 25px;
+                border: 1px solid #d9d9d9;
+                outline: none;
+            }
+            .search-button {
+                padding: 10px 20px;
+                border: none;
+                border-radius: 25px;
+                background-color: #4285f4;
+                color: white;
+                cursor: pointer;
+                margin-top: 10px;
+            }
+            .links {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+            }
+            .links a {
+                margin: 0 10px;
+                text-decoration: none;
+                color: #4285f4;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="links">
+            <a href="index.html">Google Search</a>
+            <a href="advanced.html">Advanced Search</a>
+        </div>
+        <form action="https://www.google.com/search" method="get">
+            <input type="hidden" name="tbm" value="isch">
+            <input type="text" name="q" class="search-bar" placeholder="Search Google Images...">
+            <br>
+            <input type="submit" value="Search Images" class="search-button">
+        </form>
+    </body>
+</html>
