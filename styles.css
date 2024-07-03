@@ -1,0 +1,122 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    background-color: #f1f1f1;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.header a {
+    text-decoration: none;
+    color: #1a73e8;
+    margin: 0 15px;
+    font-size: 14px;
+}
+
+.google-logo {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.google-logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.google-logo span {
+    display: block;
+    font-size: 24px;
+    color: #202124;
+    margin-top: 10px;
+}
+
+.search-bar-container {
+    text-align: center;
+    margin: 20px;
+    flex-grow: 1;
+}
+
+.search-bar-container form {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+}
+
+.search-bar-container input[type="text"] {
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 1px solid #dfe1e5;
+    border-radius: 24px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.search-bar-container input[type="text"]:focus {
+    border-color: #1a73e8;
+    box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+}
+
+.button-container {
+    position: absolute;
+    top: 50%;
+    right: -60px;
+    transform: translateY(-50%);
+}
+
+.button-container input[type="submit"] {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #1a73e8;
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+.button-container input[type="submit"]:hover {
+    background-color: #1558b3;
+}
+
+footer {
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-top: 1px solid #ddd;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-left, .footer-right {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-left a, .footer-right a {
+    text-decoration: none;
+    color: #1a73e8;
+    font-size: 14px;
+}
+
+.footer-left a:hover, .footer-right a:hover {
+    text-decoration: underline;
+}
