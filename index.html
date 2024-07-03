@@ -1,100 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google Images</title>
+    <title>Google Image Search</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0;
+            background-color: #f8f9fa;
         }
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
+
         .header {
-            padding: 20px;
+            background-color: #f1f1f1;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             border-bottom: 1px solid #ddd;
+        }
+
+        .header a {
+            text-decoration: none;
+            color: #1a73e8;
+            margin: 0 15px;
+            font-size: 14px;
+        }
+
+        .google-logo {
             text-align: center;
+            margin: 40px 0;
         }
-        .logo {
-            width: 150px;
-            height: auto;
+
+        .google-logo img {
+            display: block;
+            margin: 0 auto;
         }
-        .search-container {
+
+        .google-logo span {
+            display: block;
+            font-size: 24px;
+            color: #202124;
+            margin-top: 10px;
+        }
+
+        .search-bar-container {
             text-align: center;
-            padding: 20px;
+            margin: 20px;
         }
-        .search-box {
-            width: 100%;
-            max-width: 800px;
-            padding: 12px 20px;
+
+        .search-bar-container form {
+            display: inline-block;
+            position: relative;
+        }
+
+        .search-bar-container input[type="text"] {
+            width: 400px;
+            padding: 10px 20px;
             font-size: 16px;
             border: 1px solid #dfe1e5;
             border-radius: 24px;
             outline: none;
-            box-sizing: border-box;
-            transition: box-shadow 0.3s ease;
+            transition: all 0.3s ease;
         }
-        .search-box:focus {
-            border-color: #4d90fe;
-            box-shadow: 0 0 8px rgba(81, 203, 238, 0.8);
+
+        .search-bar-container input[type="text"]:focus {
+            border-color: #1a73e8;
+            box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
         }
-        .search-button {
-            background-color: #1a73e8;
-            color: #fff;
-            border: none;
-            padding: 12px 20px;
+
+        .button-container {
+            position: absolute;
+            top: 50%;
+            right: -60px;
+            transform: translateY(-50%);
+        }
+
+        .button-container input[type="submit"] {
+            padding: 10px 20px;
             font-size: 16px;
-            cursor: pointer;
+            color: white;
+            background-color: #1a73e8;
+            border: none;
             border-radius: 24px;
+            cursor: pointer;
+            outline: none;
             transition: background-color 0.3s ease;
         }
-        .search-button:hover {
-            background-color: #0f62fe;
+
+        .button-container input[type="submit"]:hover {
+            background-color: #1558b3;
         }
-        .footer {
-            padding: 10px;
-            font-size: 14px;
-            color: #70757a;
-            text-align: center;
-            border-top: 1px solid #ddd;
+
+        footer {
+            background-color: #f1f1f1;
+            padding: 20px;
             position: fixed;
-            bottom: 0;
             width: 100%;
-            background-color: #fff;
+            bottom: 0;
+            border-top: 1px solid #ddd;
         }
-        .footer a {
-            color: #70757a;
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-left, .footer-right {
+            display: flex;
+            gap: 15px;
+        }
+
+        .footer-left a, .footer-right a {
             text-decoration: none;
+            color: #1a73e8;
+            font-size: 14px;
         }
-        .footer a:hover {
+
+        .footer-left a:hover, .footer-right a:hover {
             text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <img class="logo" src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" alt="Google Logo">
-        </div>
-        <div class="search-container">
-            <form action="https://www.google.com/search" method="GET" target="_blank">
-                <input type="text" name="tbm" value="isch" hidden>
-                <input type="text" name="q" class="search-box" placeholder="Search images...">
-                <button type="submit" class="search-button">Search Images</button>
-            </form>
-        </div>
-        <div class="footer">
-            <p>© 2024 Google - <a href="https://www.google.com/policies/privacy/">Privacy</a> - <a href="https://www.google.com/policies/terms/">Terms</a></p>
-        </div>
+    <div class="header">
+        <a href="index.html">Google Search</a>
+        <a href="advanced.html">Advanced Search</a>
     </div>
+    <div class="google-logo">
+        <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google">
+        <span>Images</span>
+    </div>
+    <div class="search-bar-container">
+        <form action="https://www.google.com/search" method="get">
+            <input type="hidden" name="tbm" value="isch">
+            <input type="text" name="q" placeholder="Search images...">
+            <div class="button-container">
+                <input type="submit" value="Search">
+            </div>
+        </form>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <a href="#">About</a>
+                <a href="#">Advertising</a>
+                <a href="#">Business</a>
+                <a href="#">How Search works</a>
+            </div>
+            <div class="footer-right">
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">Settings</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
