@@ -3,6 +3,7 @@
 <head>
     <title>Google Image Search</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
 <body>
     <div class="header">
@@ -17,8 +18,9 @@
         <form action="https://www.google.com/search" method="get">
             <input type="hidden" name="tbm" value="isch">
             <input type="text" name="q" placeholder="Search images...">
-            <div class="button-container">
-                <input type="submit" value="Search">
+            <div class="icon-container">
+                <button type="button" class="icon-button"><i class="fas fa-microphone"></i></button>
+                <button type="submit" class="icon-button"><i class="fas fa-search"></i></button>
             </div>
         </form>
     </div>
