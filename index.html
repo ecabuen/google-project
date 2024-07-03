@@ -8,6 +8,9 @@
             margin: 0;
             padding: 0;
             background-color: #f8f9fa;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
         .header {
@@ -32,8 +35,8 @@
         }
 
         .google-logo img {
-            display: block;
-            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
         }
 
         .google-logo span {
@@ -46,15 +49,18 @@
         .search-bar-container {
             text-align: center;
             margin: 20px;
+            flex-grow: 1;
         }
 
         .search-bar-container form {
             display: inline-block;
             position: relative;
+            width: 100%;
+            max-width: 600px;
         }
 
         .search-bar-container input[type="text"] {
-            width: 400px;
+            width: 100%;
             padding: 10px 20px;
             font-size: 16px;
             border: 1px solid #dfe1e5;
@@ -94,16 +100,15 @@
         footer {
             background-color: #f1f1f1;
             padding: 20px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
             border-top: 1px solid #ddd;
+            text-align: center;
         }
 
         .footer-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
         }
 
         .footer-left, .footer-right {
